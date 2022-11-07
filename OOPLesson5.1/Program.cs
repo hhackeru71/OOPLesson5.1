@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOPLesson5._1;
+using System;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -7,13 +8,33 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
             //פולימורפיזם - רב צורתיות 
-            //
-            Base ba1 = new Base();
-            Console.WriteLine(ba1.Print());//base
-            Base ba2 = new Derived();
-            Console.WriteLine(ba2.Print());//Derived
-            Base ba3 = new Test();
-            Console.WriteLine(ba3.Print());//base
+
+            //ליצור מחלקה  person
+            //prop firstname lastname
+
+            //בנאי 
+            //person
+            //print
+
+            //יורשת ממחלקה  person מחלקה סטודנטים
+            //prop grades 
+
+            //בנאי student 
+            // print 
+
+            Person person1 = new Person("yarin","yoav");
+            Console.WriteLine(person1.GetString());
+
+            Person person2 = new Students(30, "yarin", "yoav");
+            Console.WriteLine(person2.GetString());// "yarin", "yoav", 30
+
+
+            //Base ba1 = new Base();
+            //Console.WriteLine(ba1.Print());//base
+            //Base ba2 = new Derived();
+            //Console.WriteLine(ba2.Print());//Derived
+            //Base ba3 = new Test();
+            //Console.WriteLine(ba3.Print());//base
         }
 
         class Base
