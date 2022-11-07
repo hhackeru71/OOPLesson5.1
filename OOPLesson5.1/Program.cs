@@ -9,6 +9,19 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             //פולימורפיזם - רב צורתיות 
 
+
+            Person[] pArr = new Person[2];
+            pArr[0] = new Person("yarin", "yoav");
+            pArr[1] = new Students(30, "yarin", "yoav");
+
+
+            foreach (Person p in pArr)
+            {
+                Console.WriteLine(p.GetString());
+            }
+
+            Console.WriteLine("done");
+
             //ליצור מחלקה  person
             //prop firstname lastname
 
